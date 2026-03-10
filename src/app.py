@@ -21,61 +21,60 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
 
 # In-memory activity database
 activities = {
-        "Chess Club": {
-                "description": "Learn strategies and compete in chess tournaments",
-                        "schedule": "Fridays, 3:30 PM - 5:00 PM",
-                                "max_participants": 12,
-                                        "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
-                                            },
-                                                "Programming Class": {
-                                                        "description": "Learn programming fundamentals and build software projects",
-                                                                "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
-                                                                        "max_participants": 20,
-                                                                                "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
-                                                                                    },
-                                                                                        "Gym Class": {
-                                                                                                "description": "Physical education and sports activities",
-                                                                                                        "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
-                                                                                                                "max_participants": 30,
-                                                                                                                        "participants": ["john@mergington.edu", "olivia@mergington.edu"]
-                                                                                                                            },
-                                                                                                                                "Basketball Team": {
-                                                                                                                                        "description": "Competitive basketball training and games",
-                                                                                                                                                "schedule": "Mondays and Thursdays, 4:00 PM - 5:30 PM",
-                                                                                                                                                        "max_participants": 15,
-                                                                                                                                                                "participants": ["marcus@mergington.edu"]
-                                                                                                                                                                    },
-                                                                                                                                                                        "Tennis Club": {
-                                                                                                                                                                                "description": "Tennis lessons and friendly matches",
-                                                                                                                                                                                        "schedule": "Wednesdays and Saturdays, 3:00 PM - 4:30 PM",
-                                                                                                                                                                                                "max_participants": 16,
-                                                                                                                                                                                                        "participants": ["alex@mergington.edu", "sara@mergington.edu"]
-                                                                                                                                                                                                            },
-                                                                                                                                                                                                                "Art Studio": {
-                                                                                                                                                                                                                        "description": "Painting, drawing, and mixed media projects",
-                                                                                                                                                                                                                                "schedule": "Tuesdays and Fridays, 3:30 PM - 5:00 PM",
-                                                                                                                                                                                                                                        "max_participants": 18,
-                                                                                                                                                                                                                                                "participants": ["julia@mergington.edu"]
-                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                        "Music Band": {
-                                                                                                                                                                                                                                                                "description": "Learn instruments and perform in school concerts",
-                                                                                                                                                                                                                                                                        "schedule": "Mondays, Wednesdays, Fridays, 3:30 PM - 4:30 PM",
-                                                                                                                                                                                                                                                                                "max_participants": 25,
-                                                                                                                                                                                                                                                                                        "participants": ["lucas@mergington.edu", "aisha@mergington.edu"]
-                                                                                                                                                                                                                                                                                            },
-                                                                                                                                                                                                                                                                                                "Debate Team": {
-                                                                                                                                                                                                                                                                                                        "description": "Develop public speaking and argumentation skills",
-                                                                                                                                                                                                                                                                                                                "schedule": "Tuesdays and Thursdays, 4:00 PM - 5:00 PM",
-                                                                                                                                                                                                                                                                                                                        "max_participants": 14,
-                                                                                                                                                                                                                                                                                                                                "participants": ["rachel@mergington.edu"]
-                                                                                                                                                                                                                                                                                                                                    },
-                                                                                                                                                                                                                                                                                                                                        "Science Club": {
-                                                                                                                                                                                                                                                                                                                                                "description": "Explore STEM topics through experiments and projects",
-                                                                                                                                                                                                                                                                                                                                                        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
-                                                                                                                                                                                                                                                                                                                                                                "max_participants": 20,
-                                                                                                                                                                                                                                                                                                                                                                        "participants": ["kevin@mergington.edu", "natalie@mergington.edu"]
-                                                                                                                                                                                                                                                                                                                                                                            }
-                                                                                                                                                                                                                                                                                                                                                                            }
+    "Chess Club": {
+        "description": "Learn strategies and compete in chess tournaments",
+        "schedule": "Fridays, 3:30 PM - 5:00 PM",
+        "max_participants": 12,
+        "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
+    },
+    "Programming Class": {
+        "description": "Learn programming fundamentals and build software projects",
+        "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
+        "max_participants": 20,
+        "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
+    },
+    "Gym Class": {
+        "description": "Physical education and sports activities",
+        "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
+        "max_participants": 30,
+        "participants": ["john@mergington.edu", "olivia@mergington.edu"]
+    },
+    "Basketball Team": {
+        "description": "Competitive basketball training and games",
+        "schedule": "Mondays and Thursdays, 4:00 PM - 5:30 PM",
+        "max_participants": 15,
+        "participants": ["marcus@mergington.edu"]
+    },
+    "Tennis Club": {
+        "description": "Tennis lessons and friendly matches",
+        "schedule": "Wednesdays and Saturdays, 3:00 PM - 4:30 PM",
+        "max_participants": 16,
+        "participants": ["alex@mergington.edu", "sara@mergington.edu"]
+    },
+    "Art Studio": {
+        "description": "Painting, drawing, and mixed media projects",
+        "schedule": "Tuesdays and Fridays, 3:30 PM - 5:00 PM",
+        "max_participants": 18,
+        "participants": ["julia@mergington.edu"]
+    },
+    "Music Band": {
+        "description": "Learn instruments and perform in school concerts",
+        "schedule": "Mondays, Wednesdays, Fridays, 3:30 PM - 4:30 PM",
+        "max_participants": 25,
+        "participants": ["lucas@mergington.edu", "aisha@mergington.edu"]
+    },
+    "Debate Team": {
+        "description": "Develop public speaking and argumentation skills",
+        "schedule": "Tuesdays and Thursdays, 4:00 PM - 5:00 PM",
+        "max_participants": 14,
+        "participants": ["rachel@mergington.edu"]
+    },
+    "Science Club": {
+        "description": "Explore STEM topics through experiments and projects",
+        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+        "max_participants": 20,
+        "participants": ["kevin@mergington.edu", "natalie@mergington.edu"]
+    }
 }
 
 
